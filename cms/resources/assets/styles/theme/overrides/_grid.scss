@@ -1,0 +1,8 @@
+@include breakpoints( $responsive ) {
+
+    .grid__item--auto#{ $break } {
+        flex-basis: auto;
+        width: auto;
+    }
+
+}

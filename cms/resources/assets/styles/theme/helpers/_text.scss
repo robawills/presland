@@ -1,0 +1,19 @@
+/*----------------------------------------------------------------------------*\
+	#TEXT HELPERS
+\*----------------------------------------------------------------------------*/
+
+@include ui-helpers-text(
+/*
+    $responsive: $responsive,
+    $helpers: (
+        text-start,
+        text-center,
+        text-end,
+        text-grow,
+        text-shrink,
+        text-bolder,
+        text-lighter,
+        text-uppercase
+    )
+*/
+);

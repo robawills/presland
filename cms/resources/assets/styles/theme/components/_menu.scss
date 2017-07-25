@@ -1,0 +1,16 @@
+@include ui-menu(
+    $responsive: $responsive,           // Values: false, both, up, only
+    $class: 'menu',
+    $text-transform: null,
+    $item-bg: null,
+    $item-font: null,
+    $item-margin: 0.5rem 0 0,
+    $title: null,
+    $title-bg: null,
+    $title-font: null,
+    $title-padding: null,
+    $directions: (
+        horizontal, vertical
+    ),
+    $horizontal-gap: 1rem
+)

@@ -1,0 +1,42 @@
+/*----------------------------------------------------------------------------*\
+	#DOCUMENT ELEMENT STYLES
+\*----------------------------------------------------------------------------*/
+
+html {
+    font-family: 'Lato', sans-serif;
+    background: white;
+}
+
+body {
+   overflow: visable;
+
+    &.loaded {
+        overflow: auto;
+    }
+}
+
+::selection {
+    background: rgba($inland, 0.5);
+}
+
+progress {
+    position: fixed;
+    
+    &[value], &::-webkit-progress-bar, &[value]::-webkit-progress-value {
+        border-radius: 0;
+        background: linear-gradient(
+            to right,
+            #952cd7 0%,
+            #912cdf 19%,
+            #912bdb 25%,
+            #9229ce 29%,
+            #982188 50%,
+            #9c1f7b 60%,
+            #a11e78 67%,
+            #ae207c 73%,
+            #b92588 84%,
+            #c12b96 94%
+        );
+        transition: all 1200ms cubic-bezier(.555, .205, .295, .975);
+    }
+}

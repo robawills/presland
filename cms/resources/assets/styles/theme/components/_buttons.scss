@@ -1,0 +1,93 @@
+/*----------------------------------------------------------------------------*\
+	#BUTTON COMPONENT STYLES
+\*----------------------------------------------------------------------------*/
+
+@include ui-button(
+/*
+    $class: 'button',
+    $btnReset: false,
+    $btnRadius: $radius,
+*/
+    $styles: (
+        default: (
+            color: white,
+            colorDisabled: grey,
+            bgColor: $blue,
+            bgColorHover: darken($blue, 10),
+            bgColorDisabled: $secondary,
+            padding: 0.625rem 1.5rem
+        ),
+        secondary: (
+            color: white,
+            colorDisabled: grey,
+            bgColor: $secondary,
+            bgColorHover: darken($secondary, 10),
+            bgColorDisabled: $primary
+        ),
+        light: (
+            color: $primary,
+            colorHover: white,
+            bgColor: white,
+            bgColorHover: $primary
+        ),
+        line: (
+            color: $primary,
+            lightColor: white
+        ),
+        text: (
+            color: $primary,
+            lightColor: white
+        ),
+        round: ()
+    )/*,
+
+    $sizes: (
+        tiny: (
+            fontSize: 0.75rem,
+            padding: 0.5rem 0.625rem
+        ),
+        small: (
+            fontSize: 0.875rem,
+            padding: 0.5rem 0.625rem
+        ),
+        medium: (
+            padding: 0.625rem 0.875rem
+        ),
+        large: (
+            padding: 1rem 1.125rem
+        ),
+        xlarge: (
+            fontSize: 1.125rem,
+            padding: 1.25rem 1.375rem
+        ),
+        xxlarge: (
+            fontSize: 1.25rem,
+            padding: 1.5rem 1.625rem
+        ),
+        xxxlarge: (
+            fontSize: 1.5rem,
+            padding: 2rem 2.125rem
+        )
+    )
+*/
+);
+
+.button {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.5rem;
+
+    @include media (m) {
+        font-size: 0.75rem;
+    }
+
+
+    &__nav {
+        display: none;
+
+        @include media (l) {
+            display: inline-block;
+            margin: auto;
+        }
+    }
+}

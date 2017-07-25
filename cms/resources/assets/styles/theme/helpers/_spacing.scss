@@ -1,0 +1,22 @@
+/*----------------------------------------------------------------------------*\
+	#SPACING HELPERS
+\*----------------------------------------------------------------------------*/
+
+@include ui-helpers-spacing(
+/*
+    $attrs: ( padding, margin ),
+    $responsive: $responsive,
+    $steps: 5,
+    $directions: (
+        top,
+        bottom,
+        left,
+        right,
+        top-bottom
+    )
+*/
+);
+
+.m-auto {
+    margin: auto;
+}

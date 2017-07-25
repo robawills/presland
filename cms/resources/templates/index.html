@@ -1,0 +1,394 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+     <main class="app-main" role="main">
+
+        <section id="into" class="page-wrap">
+            
+            <div class="grid into">
+                    
+                <div class="grid__item size-6@m into__logo">
+                    
+                    <img src="{{ baseUrl }}assets/images/full-logo.svg" width="" height="" class="main-logo" alt="Presland Heating & Plumbing Services">
+                
+                </div>
+
+                <div class="grid__item size-6@m into__text">
+                    
+                    <h3>With over ten years experience in all aspects of Plumbing and Heating, you will get the very best job every single time.</h3>
+                    <h4>No jobs too big or too small. Free quotes can be provided. All work is guaranteed.</h4>
+                    <button class="button into__button">Get a free quote</button>
+                    <div class="grid  grid--item">
+            
+                <a href="#m1" class="button js-modal--open">Open Modal</a>
+                
+                <a href="#m2" class="button js-modal--open">Open Modal</a>
+
+                <a href="#m3" class="button js-modal--open">Open Modal</a>
+
+                <a href="#m4" class="button js-modal--open">Open Modal</a>
+                
+                <hr>
+            
+            </div>
+            
+            <section class="modal" id="m1">
+                
+                <div class="modal__content">
+                    
+                    <button class="modal__close  js-modal--close"></button>
+                    
+                    <h1>Hello I'm Modal number 1</h1>
+                    
+                </div>
+                
+            </section>
+            
+            
+
+            <section class="modal" id="m4">
+                
+                <div class="modal__content">
+                    
+                    <h4>Hello I'm a dialog modal</h4>
+                    
+                    <div class="flex between">
+                        
+                        <button class="js-modal--close  size-5">Cancel</button>
+                        
+                        <button class="js-modal--close  size-5">Continue</button>
+                        
+                    </div>
+                    
+                </div>
+                
+            </section>
+            
+        </div>
+                
+                </div>
+
+            </div>
+            
+        </section>
+        <div class="image image--hero">
+            <img src="{{ baseUrl }}assets/images/hero.jpg">
+        </div>
+        
+        <section id="about">
+
+            <div class="grid grid--max about">
+                
+                    <div class="grid__item size-6@m about__text">
+                        <div class="page-wrap">
+                            <img class="about__mug-shot" src="{{ baseUrl }}assets/images/mug-shot.png" width="250" height="250" alt="{{ siteName }}">
+                            <h4>Hello I’m Dean and I’m the owner of Presland Services.</h4>
+                            <p>I’m always looking to do the best possible job and will never compromise on quality or service.</p>
+                            <p>Landlord friendly digital certification so there is no waiting around for certificates to be posted.</p>
+                            <p>Emails are live monitored for a quick response!</p>
+                            <p>Please get in touch and see how we can help you today, here is a summary of some of our services we offer.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="grid__item size-6@m">
+                    
+                    </div>
+                
+                </div>
+
+        </section>
+
+        <section id="certified">
+
+                <ul class="certified">
+
+                    <li class="certified-box">
+
+                        <h2>People & work you can trust</h2>
+
+                    </li>
+
+                    <li class="certified-box">
+
+                        <img class="" src="{{ baseUrl }}assets/images/check-trade.png" width="367" height="104" alt="{{ siteName }}">
+
+                    </li>
+
+                    <li class="certified-box">
+
+                        <img class="" src="{{ baseUrl }}assets/images/advance.png" width="281" height="104" alt="{{ siteName }}">
+
+                    </li>
+
+                    <li class="certified-box">
+
+                        <img class="" src="{{ baseUrl }}assets/images/gas-logo.png" width="133" height="160" alt="{{ siteName }}">
+
+                    </li>
+
+                    <li class="certified-box">
+
+                        <img class="" src="{{ baseUrl }}assets/images/people.png" width="429" height="108" alt="{{ siteName }}">
+
+                    </li>
+
+                    <li class="certified-box">
+
+                        <img class="" src="{{ baseUrl }}assets/images/water.png" width="280" height="134" alt="{{ siteName }}">
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="services" class="services">
+
+            <div class="grid page-wrap">
+                
+                <div class="grid__item size-12">
+                    
+                    <h2>Services</h2>
+
+                    <h5>No jobs too big or small</h5>
+                
+                </div>
+
+            </div>
+
+            <div class="grid page-wrap">
+
+                <div class="grid__item size-6@m">
+
+                    <h5>Heating</h5>
+
+                    <div class="grid">
+
+                        <div class="grid__item size-6@m ">
+                            
+                            <ul>
+                                <li>Boiler installations</li>
+                                <li>Boiler and heating repairs</li>
+                                <li>Boiler servicing</li>
+                                <li>Gas safety certificates</li>
+                                <li>Gas leaks</li>
+                                <li>Gas works</li>
+                                <li>Gas cookers</li>
+                                <li>Gas fires</li>
+                                <li>Radiators</li>
+                                <li>Power-flushing</li>
+                            </ul>
+        
+                        </div>
+
+                        <div class="grid__item size-6@m">
+                            
+                            <ul>
+                                <li>Under-floor heating</li>
+                                <li>Full system electrical wiring</li>
+                                <li>Valves</li>
+                                <li>Pumps</li>
+                                <li>Motorised valves</li>
+                                <li>Immersion heaters</li>
+                            </ul>
+        
+                        </div>
+
+                    </div>
+                
+                </div>
+                    
+                <div class="grid__item size-3@m services__border services__padding">
+
+                    <h5>Plumbing</h5>
+
+                    <ul>
+                        <li>Overflows</li>
+                        <li>Burst pipes</li>
+                        <li>Cold water storage</li>
+                        <li>Stopcocks</li> 
+                        <li>Taps</li>
+                        <li>Washing machine installation</li>
+                        <li>Dishwasher installation</li>
+                        <li>Washers</li>
+                        <li>Waste pipes</li> 
+                        <li>Rain water pipes</li>
+                    </ul>
+
+                </div>
+
+                <div class="grid__item size-3@m services__padding">
+
+                    <h5>Drainage</h5>
+
+                    <ul>
+                        <li>Blockages</li>
+                        <li>Drains</li>
+                        <li>Pumps</li>
+                        <li>Waste disposal units</li>  
+                        <li>Toilets</li>
+                        <li>Saniflos</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="rate" class="rate">
+            <div class="page-wrap">
+            <div class="grid rate__page_wrap">
+
+                <div class="grid__item size-12">
+
+                    <table class="rate__table">
+                        <h2 class="rate__h2">Our rates</h2>
+                        <tr>
+                            <th class="rate__col-1"></th>
+                            <th class="rate__col-2">
+                                <h5 class="rate__title">Normal Hours</h5>
+                                <p class="rate__sub-title">(7am – 8pm Monday - Friday)</p>
+                            </th>
+                            <th class="rate__col-3">
+                                <h5 class="rate__title">Out of hours, weekends & bank holiday</h5>
+                                <p class="rate__sub-title">(8pm-7am Monday - Friday, all day weekends and bank holidays)</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="rate__col-1">Charge per hour then 30 min slots after</td>
+                            <td class="rate__col-2 rate__number">£70</td>
+                            <td class="rate__col-3 rate__number">£100</td>
+                        </tr>
+                        <tr>
+                            <td class="rate__col-1">Boiler Service</td>
+                            <td class="rate__col-2 rate__number">£70</td>
+                            <td class="rate__col-3 rate__number">£100</td>
+                        </tr>
+                        <tr>
+                            <td class="rate__col-1">Gas safety</td>
+                            <td class="rate__col-2 rate__number">£70</td>
+                            <td class="rate__col-3 rate__number">£100</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">Landlords gas safety and service pack</td>
+                            <td class="rate__col-2 rate__number">£120</td>
+                            <td class="rate__col-3 rate__number">£160</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">Pre purchase survey: Gas, Central Heating and Plumbing</td>
+                            <td class="rate__col-2 rate__number">£150</td>
+                            <td class="rate__col-3 rate__number">£150</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1"></td>
+                            <td class="rate__col-2 rate__number"></td>
+                            <td class="rate__col-3 rate__number rate__number--small">(Prices do not include VAT)</td>
+                        </tr>
+                        
+                    </table>
+
+                    
+                    <table class="rate__table rate__table--50">
+                        <h6>System Powerflushing (including approved chemicals)</h6>
+                        <tr>
+                            <td class="rate__col-1">Up to 4 radiators</td>
+                            <td class="rate__col-2 rate__number">£280</td>
+                        </tr>
+                        <tr>
+                            <td class="rate__col-1">5 radiators</td>
+                            <td class="rate__col-2 rate__number">£320</td>
+                        </tr>
+                        <tr>
+                            <td class="rate__col-1">6 radiators</td>
+                            <td class="rate__col-2 rate__number">£360</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">7 radiators</td>
+                            <td class="rate__col-2 rate__number">£400</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">8 radiators</td>
+                            <td class="rate__col-2 rate__number">£440</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">9 radiators</td>
+                            <td class="rate__col-2 rate__number">£480</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">10 radiators</td>
+                            <td class="rate__col-2 rate__number">£520</td>
+                        </tr>
+
+                        <tr>
+                            <td class="rate__col-1">Per additional radiators<br>(domestic installations only)</td>
+                            <td class="rate__col-2 rate__number">£45</td>
+                        </tr>
+                    </table>
+
+                    
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <sections id="contact">
+            
+            <div class="grid">
+                <div class="page-wrap">
+                    <div class="grid contact">
+                        <div class="grid__item size-12">
+                            <h2>Contact us</h2>
+                        </div>
+
+                        <div class="grid__item size-6@m">
+                            <h5 class="h5">To request a free quote please fill in the form or contact us on <a href="tel:00000000000" class="contact__link">00000 000000</a> or email <a href="mailto:example@example.co.uk" class="contact__link">example@example.co.uk</a></h2>
+                            <p>We are always montering email and keeping upto date to ensure you get a fast and hassel free service.</p>
+                            <p>Your contact details will only be used to contact you regarding your quote and no infomation will be passed on.</p>
+                        </div>
+
+                        <div class="grid__item size-6@m">
+                            <p>Name</p>
+                            <p>Email</p>
+                            <p>Telephone</p>
+                            <p>Message</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sections>
+
+        
+    </main> 
+	
+  
+	
+{% endblock %}

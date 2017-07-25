@@ -1,0 +1,9 @@
+.register-form {
+    @include media(l) {
+        display: flex;
+    }
+
+    &__submit {
+        width: 100%;
+    }
+}

@@ -1,0 +1,38 @@
+.certified {
+
+     @extend .unlist;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    
+
+    @include media(m) {
+        padding: 3rem;
+    }
+
+}
+
+.certified-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: no-repeat center / cover;
+    min-height: 9rem;
+    width: 100%;
+    padding: 1.875rem;
+    text-align: left;
+
+    @include media(m) {
+        width: 50%;
+        min-height: 10rem;
+    }
+
+    @include media(l) {
+        width: 33.33%;
+        padding: 3rem;
+    }
+
+    
+
+}

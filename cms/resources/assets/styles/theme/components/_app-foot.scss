@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------------------*\
+	#APP FOOTER
+\*----------------------------------------------------------------------------*/
+
+.app-foot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: auto;
+
+    @include media(l) {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    
+    &__logo {
+        margin: 2rem auto auto;
+        width: 8rem;
+        height: 2.75rem;
+
+        @include media(l) {
+            width: 12rem;
+            height: 4.125rem;
+            margin-right: 0;
+        }
+    }
+}

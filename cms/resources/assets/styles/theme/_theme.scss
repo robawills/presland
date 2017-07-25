@@ -1,0 +1,113 @@
+/*!---------------------------------------------------------------------------*\
+    
+	#YOUR PROJECT NAME
+	
+	- Version:      1.0
+	- Author:       YOUR NAME
+	- Site:         http://YOUR_SITE
+	- Copyright:    2016, YOUR COMPANY
+	– License:      YOUR LICENSE
+	
+\*----------------------------------------------------------------------------*/
+
+
+
+@import 'utils';                        // Mixins and functions, no output.
+
+
+
+/*----------------------------------------------------------------------------*\
+	#GENERIC
+	
+	Ground-zero styles. Low-specificity, far-reaching.
+\*----------------------------------------------------------------------------*/
+
+@import 'generic/keyframes';            // CSS Keyframe blocks.
+@import 'generic/fonts';                // Vector icons/fonts includes.
+@import 'generic/shared';               // Shared global commonalities.
+
+
+
+/*----------------------------------------------------------------------------*\
+	#ELEMENTS
+	
+	Last layer for type selectors (h1-h6, a).
+\*----------------------------------------------------------------------------*/
+
+@import 'elements/document';            // Page-level styles (HTML, body etc).
+@import 'elements/forms';               // Form inputs, textareas.
+@import 'elements/images';              // Image stying.
+@import 'elements/links';               // Hyperlink styles.
+@import 'elements/lists';               // List styles.
+@import 'elements/quotes';              // Blockquotes, cite, etc.
+@import 'elements/type';                // All type styles.
+
+
+
+/*----------------------------------------------------------------------------*\
+	#OBJECTS
+	
+	Design Patterns. Layout. No cosmetics. Start using agnostic classes only.
+\*----------------------------------------------------------------------------*/
+
+@import 'objects/page-wrap';			// Page wrap
+
+
+
+/*----------------------------------------------------------------------------*\
+	#PARTIES
+	
+	3rd party plugins/extensions styles.
+\*----------------------------------------------------------------------------*/
+
+@import 'parties/sprout';               // Sprout Forms
+//@import 'parties/hamburgers';               // hamburger Forms
+
+
+/*----------------------------------------------------------------------------*\
+	#COMPONENTS
+	
+	Designed pieces of UI. Only using classes. More explicit naming.
+\*----------------------------------------------------------------------------*/
+
+@import 'components/buttons';           // Button styles.
+@import 'components/app-head';          // The page header.
+@import 'components/app-main';          // The page main.
+@import 'components/app-foot';          // The page footer.
+@import 'components/app-nav';          	// The page nav.
+@import 'components/images';          	// Images styles.
+@import 'components/register-form';     // Register form.
+@import 'components/certified';         // Ceritified styling.
+@import 'components/about';          	// About styles.
+@import 'components/into';          	// Into styles.
+@import 'components/services';         	// Services styles.
+@import 'components/rates';         	// Rates styles.
+@import 'components/contact';         	// Contact styles.
+@import 'components/menu';         		// Menu styles.
+@import 'components/overlay';         	// Overlay styles.
+@import 'components/modal';         	// Modal wodal styles.
+
+
+
+/*----------------------------------------------------------------------------*\
+	#HELPERS
+	
+	Overrides, helpers, utilities. Only affect one item at a time.
+\*----------------------------------------------------------------------------*/
+
+@import 'helpers/spacing';              // Micro-level spacing.
+@import 'helpers/text';                 // Handy text assistants.
+
+
+
+/*----------------------------------------------------------------------------*\
+	#OVERRIDES
+	
+	Overrides, helpers, utilities. Only affect one item at a time.
+\*----------------------------------------------------------------------------*/
+
+@import 'overrides/validation';         // Form validation styles.
+@import 'overrides/visibility';         // Helpers to show and side stuff.
+@import 'overrides/grid';         		// Add modifiers for the grid.
+
+

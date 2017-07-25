@@ -1,0 +1,79 @@
+{
+  "name": "ui-kit",
+  "version": "0.9.7",
+  "description": "The Creative Little UI Kit is a fully responsive framework crafted for unbeatable performance. Based on the ITCSS methodology this front-end springboard is super scaleable, lightweight, and built for the future.",
+  "repository": "git+https://matt3224@github.com/CreativeLittleDots/Creative-Little-UI-Kit.git",
+  "author": "Matt Pilott",
+  "maintainers": [
+    {
+      "name": "Matt Pilott",
+      "email": "matt@creativelittledots.co.uk"
+    },
+    {
+      "name": "Chris Myers",
+      "email": "chris@creativelittledots.co.uk"
+    },
+    {
+      "name": "Darby Manning",
+      "email": "darby@creativelittledots.co.uk"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CreativeLittleDots/Creative-Little-UI-Kit/issues"
+  },
+  "homepage": "https://github.com/CreativeLittleDots/Creative-Little-UI-Kit#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.0",
+    "browser-sync": "^2.18.11",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-smushit": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "onchange": "^3.2.1",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^4.0.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-watch": "^3.2.2",
+    "stylelint": "^7.10.1",
+    "uglify-es": "^3.0.10",
+    "yarn": "^0.24.5"
+  },
+  "stylelint": {
+    "rules": {
+      "indentation": 4,
+      "number-leading-zero": null
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR",
+    "iOS 9",
+    "not ie_mob <= 12",
+    "not ie <= 10",
+    "not blackberry <= 7"
+  ],
+  "scripts": {
+    "autoprefixer": "postcss --use autoprefixer --replace ./public/assets/styles/style.css --no-map",
+    "scss": "node-sass --omit-source-map-url --recursive --output-style compressed --output ./public/assets/styles ./cms/resources/assets/styles",
+    "lint-scss": "stylelint ./cms/resources/assets/styles/*.scss --syntax scss || true",
+    "build:css": "yarn run lint-scss --silent && yarn run scss --silent && yarn run autoprefixer --silent",
+    "build:js": "rollup --config",
+    "watch:css": "onchange './cms/resources/assets/styles/**/*.scss' -- yarn run build:css --silent",
+    "watch:js": "rollup --config rollup.config.application.js --watch && rollup --config rollup.config.application.js --watch",
+    "watch:all": "parallelshell 'yarn run watch:css --silent' 'yarn run watch:js --silent'",
+    "postinstall": "yarn run watch:all --silent",
+    "go": "yarn run postinstall --silent"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "watch": "^1.0.2"
+  }
+}

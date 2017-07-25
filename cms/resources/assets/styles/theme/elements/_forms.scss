@@ -1,0 +1,42 @@
+/*----------------------------------------------------------------------------*\
+	#FORM ELEMENT STYLES
+\*----------------------------------------------------------------------------*/
+
+textarea,
+[type="email"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"] {
+
+    &, &:focus {
+        color: white;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    &::placeholder {
+        opacity: 1;
+    }
+}
+
+input {
+    height: 3.25rem;
+}
+
+[type="submit"] {
+    color: #2E88D6;
+    background: white;
+    padding: 0 2rem;
+    cursor: pointer;
+}

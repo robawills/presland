@@ -1,0 +1,85 @@
+// $gap: 0.25rem;
+
+// .register-form {
+//     display: flex;
+// }
+
+// .submit {
+//     margin-left: $gap*2;
+// }
+
+// .heading {
+//     text-align: left;
+// }
+
+// .required label::after {
+//     content: ' *';
+// }
+
+// .tab {
+//     display: flex;
+//     flex-wrap: wrap;
+//     max-width: 50rem;
+//     margin: 0 -#{$gap};
+//     justify-content: space-between;
+// }
+
+// .field {
+//     @include media(null, m) {
+//         flex-basis: 100%;
+//         width: 100%;
+//     }
+//     @include media(m) {
+//         $width: calc(33.333% - 0.5rem);
+//         flex-basis: $width;
+//         width: $width;   
+//     }
+// }
+
+// .address-field, .yourMessage-field {
+//     @include media(m) {
+//         flex-basis: 100%;
+//         width: 100%;
+//     }
+// }
+
+// @include ui-button(
+//     $class: 'submit input[type="submit"]',
+//     $btnRadius: 0,
+//     $styles: (
+//         default: (
+//             color: white,
+//             colorDisabled: grey,
+//             bgColor: $primary,
+//             bgColorHover: darken($primary, 10),
+//             bgColorDisabled: $secondary,
+//             padding: 1rem 1.25rem
+//         )
+//     ),
+//     $sizes: ()
+// );
+
+// .submit {
+//     display: flex;
+// }
+// .submit input[type="submit"] {
+//     @include media(null, m) {
+//         margin: 1rem auto auto;
+//         width: 100%;
+//     }
+    
+//     @include media(m) {
+//         margin: 1rem 0 0 auto;
+//     }
+    
+//     font-weight:  bold;
+// }
+
+// .small {
+//     display: block;
+//     text-align: left;
+    
+//     @include media(null, m) {
+//         margin-top: 1rem;
+//     }
+// }

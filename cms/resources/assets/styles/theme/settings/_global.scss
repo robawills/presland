@@ -1,0 +1,19 @@
+/*----------------------------------------------------------------------------*\
+	#GLOBAL VARIABLES
+\*----------------------------------------------------------------------------*/
+
+$speed: 350ms;
+$ease: ease;
+$inset-padding: 2rem;
+
+$menuBreak: 52.5em;
+
+$appHead: 10rem;
+
+$breakpoints: (
+    s:              null,                 //Smartphone
+    m:              768px,                //Tablet
+    l:              1025px,               //Notebook
+    //xl:             1201px,               //Laptop
+    //xxl:            1601px                //Desktop
+);

@@ -1,0 +1,1 @@
+(function(a){a.settings={speed:250}})(window.UIKit=window.UIKit||{},window.jQuery=window.jQuery||window.$);

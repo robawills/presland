@@ -1,0 +1,146 @@
+/*----------------------------------------------------------------------------*\
+	#MENU COMPONENT
+\*----------------------------------------------------------------------------*/
+
+@mixin ui-menu(
+    $responsive: $responsive,           // Values: false, both, up, only
+    $class: 'menu',
+    $text-transform: uppercase,
+    $item-bg: none,
+    $item-font: 0.75rem inherit,
+    $item-margin: 1rem 0 1rem 1.5rem,
+    $title: true,
+    $title-bg: #ededed,
+    $title-font: 700 0.88rem inherit,
+    $title-padding: 0.75rem 1rem,
+    $directions: (
+        horizontal, vertical
+    ),
+    $horizontal-gap: 1rem
+) {
+    
+    .#{$class} {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        @if ( $text-transform != null ) {
+            text-transform: $text-transform;
+        }
+        
+        @if index($directions, horizontal) {
+            
+            &--horizontal#{$break} {
+
+                &__item {
+                    display: inline-block;
+                    
+                    + .#{$class}__item {
+                        margin-left: $horizontal-gap;
+                    }
+                }
+                
+            }
+            
+            &--vertical#{$break} {
+                
+                &__item {
+                    display: list-item;
+                    @if ( $item-margin != null ) {
+                        margin: $item-margin;
+                    }
+                }
+            }
+            
+        }
+        
+        @if ( $title == true ) {
+            
+            &__title {
+                display: block;
+                
+                @if ( $title-padding != null ) {
+                    padding: $title-padding;
+                }
+                
+                @if ( $title-font != null ) {
+                    font: $title-font;
+                }
+                
+                @if ( $title-bg != null ) {
+                    background-color: $title-bg;
+                }
+            }
+            
+        }
+        
+        &__item {
+            
+            @if ( $item-margin != null ) {
+                margin: $item-margin;
+            }
+            
+            @if ( $item-font != null ) {
+                font: $item-font;
+            }
+            
+            @if ( $item-bg != null ) {
+                background-color: $item-bg;
+            }
+            
+        }
+        
+    }
+    
+    // Check first if we need to provide responsive helpers
+    @if $responsive != false {
+
+        @include breakpoints( $responsive ) {
+            
+            @include ui-create-menu( $class, $item-margin, $directions, $horizontal-gap, $break );
+        
+        }
+        
+
+    // If not responsive, just run the general loop
+    } @else {
+
+        @include ui-create-menu( $class, $item-margin, $directions, $horizontal-gap, $break: '' );
+    
+    }
+    
+}
+
+@mixin ui-create-menu( $class, $item-margin, $directions, $horizontal-gap, $break ) {
+    
+    .#{$class} {
+
+        @if index($directions, horizontal) {
+            
+            &--horizontal#{$break} {
+
+                .#{$class}__item {
+                    display: inline-block;
+                    
+                    + .#{$class}__item {
+                        margin-left: $horizontal-gap;
+                    }
+                }
+                
+            }
+            
+            &--vertical#{$break} {
+                
+                .#{$class}__item {
+                    display: list-item;
+                    @if ( $item-margin != null ) {
+                        margin: $item-margin;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+}

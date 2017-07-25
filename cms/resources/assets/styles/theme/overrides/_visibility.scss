@@ -1,0 +1,18 @@
+/*----------------------------------------------------------------------------*\
+	#VISIBILITY TRUMPS
+\*----------------------------------------------------------------------------*/
+
+.animate {
+	opacity: 0;
+	transition: all $speed $ease;
+	transform: translateY(50%);
+
+	&--bottom {
+		transform: translateY(-50%);
+	}
+
+	&--loaded {
+		opacity: 1;
+		transform: none;
+	}
+}

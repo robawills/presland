@@ -1,0 +1,40 @@
+.into {
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+
+    &__logo {
+        padding: 2rem 0;
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+    }
+
+    &__text {
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+    }
+
+    &__button {
+        width: 12rem;
+        margin: 2rem 0;
+    }
+
+    @include media(m) {
+        padding: 5rem 0;
+        &__logo {
+            padding: 0 3rem 0 0;
+        }
+    }
+
+    @include media(l) {
+        padding: 8rem 0;
+
+        &__logo {
+            padding: 0 8rem 0 0;
+        }
+    }
+    
+}

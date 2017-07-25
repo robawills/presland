@@ -1,0 +1,1 @@
+(function(a){a.settings.tabs={tabsClass:'tabs',tabClass:'tab',tabActiveClass:'tab--active',tabContentsClass:'tab-contents',tabContentClass:'tab-content',tabContentActiveClass:'tab-content--active'}})(window.UIKit=window.UIKit||{},window.jQuery=window.jQuery||window.$);

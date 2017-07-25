@@ -1,0 +1,64 @@
+/*----------------------------------------------------------------------------*\
+	#TYPE ELEMENT STYLES
+\*----------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem;
+    line-height: 1.2em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.625rem;
+    
+    @include media(m) {
+        font-size: 3rem;
+    }
+    
+    @include media(l) {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+
+    @include media(m) {
+        font-size: 2.75rem;
+    }
+
+    @include media(l) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    @include media(m) {
+        font-size: 1.625rem;
+    }
+
+    @include media(l) {
+        font-size: 1.875rem;
+    }
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.125rem;
+
+    @include media(l) {
+        font-size: 1.375rem;
+    }
+}
+
+p {
+    margin: 0 0 1rem;
+    line-height: 1.4em;
+    font-size: 1rem;
+    
+
+}

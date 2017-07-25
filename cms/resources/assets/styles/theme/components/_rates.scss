@@ -1,0 +1,115 @@
+.rate {
+    background-color: $blue;
+    color: white;
+    text-align: left;
+    padding: 2rem 0;
+    
+    @include media (m) {
+      padding: 5rem 0;  
+    }
+
+    &__h2 {
+        text-align: center;
+    }
+    
+    &__page_wrap {
+        width: 90%;
+        margin: 0 auto;
+        @include media (m) {
+            width: 85%;
+        }
+        @include media (l) {
+            width: 80%;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        @include media (m) {
+            font-size: 1.25rem;
+        }
+        @include media (l) {
+            font-size: 1.5rem;
+        }
+    }
+    &__sub-title {
+        font-size: 0.75rem;
+        font-weight: 900;
+        
+        @include media (m) {
+            font-size: 0.9rem;
+        }
+
+        @include media (l) {
+            font-size: 1rem;
+        }
+    }
+
+    &__table {
+        margin: 1.5rem 0;
+        width: 100%;
+        @include media (m) {
+            margin: 2rem auto;
+        }
+        @include media (l) {
+            margin: 3rem 0;
+        }
+
+        &--50 {
+            width: 90%;
+            @include media (m) {
+                width: 50%;
+                margin: 0;
+            }
+        }
+    }
+
+    &__col-1 {
+        width: 20%;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+
+        @include media (m) {
+            padding: 0 1rem;
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
+        
+    }
+    &__col-2 {
+        width: 20%;
+        padding: 0 0.75rem;
+        @include media (l) {
+            padding: 0 1rem;
+        } 
+    }
+    &__col-3 {
+        width: 40%;
+        padding: 0 0.75rem;
+        @include media (l) {
+            padding: 0 1rem;
+        }        
+    }
+    
+    &__number {
+        font-size: 1rem;
+        @include media (m) {
+            font-size: 1.5rem;
+        }
+
+        @include media (l) {
+            font-size: 1.75rem;
+        }
+
+        &--small {
+            font-size: 1rem;
+            text-align: right;
+            padding-top: 1rem;
+        }
+
+    }
+
+    tr:nth-child(even){background-color:lighten($blue, 12)}
+
+}
