@@ -43,9 +43,11 @@
 
     });
 
+    
+
 
 /* Checks if the namespace already exists & if not assign it */
 
-})(window.REDDINGSCOURT = window.REDDINGSCOURT);
+})(window.PRESLAND = window.PRESLAND);
 
 

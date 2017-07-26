@@ -30,14 +30,25 @@
     <body>
         
         
-        <aside id="aside" class="off-canvas">
-            <h1>hello</h1>
+        <aside id="aside" class="off-canvas app-nav">
+            <ul class="app-nav__list app-nav__list--mobile hide@m">
+                
+                <li class="app-nav__item app-nav__item--mobile"><a href="#home" class="app-nav__link">Home</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#about" class="app-nav__link">About</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#services" class="app-nav__link">Services</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#rates" class="app-nav__link">Rates</a></li>
+                {# <li class="app-nav__item app-nav__item--mobile "><a href="#reviews" class="app-nav__link">Reviews</a></li> #}
+                <li class="app-nav__item app-nav__item--mobile "><a href="#contact" class="app-nav__link">Contact</a></li>
+            </ul>
         </aside>
         
         
         <div class="canvas">
-            <a href="#aside" class="open-off-canvas hide@m"><h1>☰</h1></a>
-            <a href="#" class="close-off-canvas">X</a>
+            
+            <div class="mobile-menu hide@m">
+                <a href="#aside" class="open-off-canvas"><h1>☰</h1></a>
+                <a href="#" class="close-off-canvas">X</a>
+            </div>
 
             <header class="app__head hide@s-only">
                 <div class="page-wrap page-wrap--menu">
@@ -49,12 +60,12 @@
                     <nav role="navigation" class="app-nav">
                             
                         <ul class="app-nav__list">
-                            <li class="app-nav__item"><a href="#home" class="app-nav__link">Home</a></li>
-                            <li class="app-nav__item"><a href="#about" class="app-nav__link">About</a></li>
-                            <li class="app-nav__item"><a href="#services" class="app-nav__link">Services</a></li>
-                            <li class="app-nav__item"><a href="#rates" class="app-nav__link">Rates</a></li>
-                            {# <li class="app-nav__item"><a href="#reviews" class="app-nav__link">Reviews</a></li> #}
-                            <li class="app-nav__item"><a href="#contact" class="app-nav__link">Contact</a></li>
+                            <li class="app-nav__item "><a href="#home" class="app-nav__link">Home</a></li>
+                            <li class="app-nav__item "><a href="#about" class="app-nav__link">About</a></li>
+                            <li class="app-nav__item "><a href="#services" class="app-nav__link">Services</a></li>
+                            <li class="app-nav__item "><a href="#rates" class="app-nav__link">Rates</a></li>
+                            {# <li class="app-nav__item "><a href="#reviews" class="app-nav__link">Reviews</a></li> #}
+                            <li class="app-nav__item "><a href="#contact" class="app-nav__link">Contact</a></li>
                         </ul>
                         
                     </nav>

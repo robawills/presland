@@ -2,5 +2,12 @@
 
 textarea, [type="email"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"] {
     border-bottom: 1px solid black;
+    margin-bottom: 2rem;
 
+}
+
+.form {
+    &__title {
+        margin: 0;
+    }
 }

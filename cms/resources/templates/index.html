@@ -349,19 +349,19 @@
                                 <input type="hidden" name="action" value="contactForm/sendMessage">
                                 <input type="hidden" name="redirect" value="thanks">
 
-                                <h6><label for="fromName">Your Name</label></h6>
+                                <h6 class="form__title"><label for="fromName">Your Name</label></h6>
                                 <input class="form__input" id="fromName" type="text" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
                                 {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
 
-                                <h6><label for="fromEmail">Your Email</label></h6>
+                                <h6 class="form__title"><label for="fromEmail">Your Email</label></h6>
                                 <input class="form__input" id="fromEmail" type="email" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
                                 {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
 
-                                <h6><label for="subject">Subject</label></h6>
+                                <h6 class="form__title"><label for="subject">Subject</label></h6>
                                 <input id="subject" type="text" class="form__input" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}">
                                 {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
-                                <h6><label for="message">Message</label></h6>
+                                <h6 class="form__title"><label for="message">Message</label></h6>
                                 <textarea class="form__input" rows="10" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
                                 {{ message is defined and message ? errorList(message.getErrors('message')) }}
 
