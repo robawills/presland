@@ -41,7 +41,7 @@ return [
     
     '.local' => [
         'devMode' => true,
-        'testToEmailAddress' => 'darby@kbamarketing.co.uk',
+        'testToEmailAddress' => 'robawills@me.com',
         'siteUrl' => 'http://dean.local/',
         'enableTemplateCaching' => false,
         'environmentVariables' => [
