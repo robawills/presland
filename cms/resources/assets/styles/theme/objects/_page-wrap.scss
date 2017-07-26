@@ -2,8 +2,12 @@
     width:100%;
     margin: 0 auto;
     padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
+    
+
+    &--menu {
+        display: flex;
+        justify-content: space-between;
+    }
 
     @include media (m) {
         padding: 0 3rem;
