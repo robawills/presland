@@ -2,121 +2,20 @@
 	#APP NAV
 \*----------------------------------------------------------------------------*/
 
-// .app-nav {
-//     width: 100%;
-//     margin-top: 2rem;
-//     display: inline-block;
-//     text-align: center;
-//     @include media (m) {
-//         text-align: left;
-//     }
-//     &__item {
-//         display: inline-block;
-//         padding-right: 3rem;
-//     }
-    
-// }
+
 
 .app-nav {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 100%;
-    width: 100%;
-    height: $appHead;
-
-    &__logo, .hamburger, &__contact {
-        flex-basis: 33.33%;
-    }
-
-    &__logo-image {
-        width: 2rem;
-        
-        @include media(m) {
-            width: 2.5rem;
-        }
-    }
-
-    &__contact {
-        margin: auto;
-        justify-content: flex-end;
-        display: flex;
-    }
-    
-
-    $offset: 1rem;
-    &__logo { margin-left: $offset; }
-    &__contact { margin-right: $offset; }
-
-    @include media(m) {
-        $offset: 3rem;
-        &__logo { margin-left: $offset; }
-        &__contact { margin-right: $offset; }
-      
-    }
-
-    @media only screen and (max-width: rem(map-get($breakpoints, l) - 1px)) {
-        &--menu-active .app-nav__item {
-            opacity: 1;
-            transform: none;
-            pointer-events: all;
-
-            // MIGRATED THIS TO CRAFT
-            // $delay: 400ms;
-            // $delayInt: 60ms;
-
-            // @for $i from 1 through 4 {
-            //     &:nth-child(#{$i}) {
-            //         transition-delay: $delay + ($i - 1) * $delayInt;
-            //     }
-            // }
-        }
-    }
 
     &__list {
-        margin: auto;
-        flex-grow: 1;
-        text-align: center;
-        list-style: none;
-        padding: 0;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        @media only screen and (max-width: rem(map-get($breakpoints, l) - 1px)) {
-            position: fixed;
-            top: $appHead;
-            width: 100%;
-            height: calc(100% - #{$appHead});
-            left: 0;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            font-size: 1.5rem;
-            pointer-events: none;
-            transition: all 200ms cubic-bezier(.555, .205, .295, .975);
-            
-            &--contact-active {
-                transform: translateX(-100%);
-            }
-        }
+        list-style: none;
+        margin: auto;
     }
-        &__item {
-            @include media(l) {
-                display: inline;
-            }
-            @media only screen and (max-width: rem(map-get($breakpoints, l) - 1px)) {
-                margin: 1.5rem 0;
-                opacity: 0;
-                transform: scale(0);
-                transition: all 200ms cubic-bezier(.555, .205, .295, .975);
-            }
-        }
-            &__link {
-                padding: 0.75rem;
-                @include media(m) {
-                    margin: 0 1rem;
-                }
-            }
+
+    &__item {
+        display: flex;
+        margin: auto 2rem;
+    }
 
 }

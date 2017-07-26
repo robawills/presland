@@ -31,23 +31,22 @@
         
         
         <aside id="aside" class="off-canvas">
-            
             <h1>hello</h1>
-            
         </aside>
         
         
         <div class="canvas">
-        
-            <header>
-                
-                <div class="grid  grid--item">
+            <a href="#aside" class="open-off-canvas hide@m">☰</a>
+            <a href="#" class="close-off-canvas">☰</a>
+
+            <header class="app__head hide@s-only">
+                <div class="page-wrap">
+
                     
-                    <a href="#aside" class="open-off-canvas">☰</a>
                     
-                    <a href="#" class="close-off-canvas">☰</a>
+                    <img src="{{ baseUrl }}assets/images/logo.svg" width="" height="" class="app-head__logo" alt="{{ siteName }}">
                         
-                    <nav role="navigation">
+                    <nav role="navigation" class="app-nav">
                             
                         <ul class="app-nav__list">
                             <li class="app-nav__item"><a href="#home" class="app-nav__link">Home</a></li>
@@ -60,54 +59,15 @@
                         
                     </nav>
 
-                    <div class="grid__item size-2@l">
-                        <button class="button button__nav">Get a free quote</button>
-                    </div>
-                
+                    <a class="button into__button js-modal--open" href="#m1">
+                        Get a free quote
+                    </a> 
                 </div>
-                        
             </header>
 
 
 
-            <!-- <header class="app-head">
-
-                <nav role="navigation" class="app-nav">
-                    <div class="grid">
-
-                        <div class="grid__item size-1@m">
-                            <img src="{{ baseUrl }}assets/images/logo.svg" width="" height="" class="app-head__logo" alt="{{ siteName }}">
-                        </div>
-
-                        <button class="hamburger  hamburger--collapse  hide@l  js-hamburger" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button> 
-
-                    
-                        
-                    
-
-                        <div class="grid__item size-10@m size-9@l">
-                            <ul class="app-nav__list">
-                                <li class="app-nav__item"><a href="{{ siteUrl }}" class="app-nav__link">Home</a></li>
-                                <li class="app-nav__item"><a href="{{ siteUrl }}" class="app-nav__link">About</a></li>
-                                <li class="app-nav__item"><a href="{{ siteUrl }}" class="app-nav__link">Services</a></li>
-                                <li class="app-nav__item"><a href="{{ siteUrl }}" class="app-nav__link">Rates</a></li>
-                                <li class="app-nav__item"><a href="{{ siteUrl }}" class="app-nav__link">Reviews</a></li>
-                                <li class="app-nav__item"><a href="{{ siteUrl }}" class="app-nav__link">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class="grid__item size-2@l">
-                            <button class="button button__nav">Get a free quote</button>
-                        </div>
-                        
-
-                    </div>
-                </nav>
-                
-            </header> -->
+            
                 
             <main role="main" class="app-main">
                 {% block content %}
