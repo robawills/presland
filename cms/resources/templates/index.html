@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="grid__item size-6@m">
-                    
+                        
                     </div>
                 
                 </div>
@@ -326,7 +326,7 @@
                         </div>
 
                         <div class="grid__item size-6@m">
-                            <h5 class="h5">To request a free quote please fill in the form or contact us on <a href="tel:00000000000" class="contact__link">00000 000000</a> or email <a href="mailto:example@example.co.uk" class="contact__link">example@example.co.uk</a></h2>
+                            <h5 class="h5">To request a free quote please fill in the form or contact us on <a href="tel:07835020316" class="contact__link">07835 020316</a> or email <a href="mailto:info@preslandservices.com" class="contact__link">info@preslandservices.com</a></h2>
                             <p>We are always montering email and keeping upto date to ensure you get a fast and hassel free service.</p>
                             <p>Your contact details will only be used to contact you regarding your quote and no infomation will be passed on.</p>
                         </div>
@@ -380,45 +380,45 @@
             <div class="modal__content">
                 
                 <button class="modal__close  js-modal--close"></button>
-                
-                <div class="grid__item size-6@m">
-                    {% macro errorList(errors) %}
-                        {% if errors %}
-                            <ul class="errors">
-                                {% for error in errors %}
-                                    <li>{{ error }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    {% endmacro %}
+                <div class="grid">
+                    <div class="grid__item size-9@m">
+                        {% macro errorList(errors) %}
+                            {% if errors %}
+                                <ul class="errors">
+                                    {% for error in errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endmacro %}
 
-                    {% from _self import errorList %}
+                        {% from _self import errorList %}
 
-                    <form method="post" action="" accept-charset="UTF-8">
-                        {{ getCsrfInput() }}
-                        <input type="hidden" name="action" value="contactForm/sendMessage">
-                        <input type="hidden" name="redirect" value="contact/thanks">
+                        <form method="post" action="" accept-charset="UTF-8" class="form">
+                            {{ getCsrfInput() }}
+                            <input type="hidden" name="action" value="contactForm/sendMessage">
+                            <input type="hidden" name="redirect" value="thanks">
 
-                        <h6><label for="fromName">Your Name</label></h6>
-                        <input id="fromName" type="text" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
-                        {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+                            <h6 class="form__title"><label for="fromName">Your Name</label></h6>
+                            <input class="form__input" id="fromName" type="text" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
+                            {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
 
-                        <h6><label for="fromEmail">Your Email</label></h6>
-                        <input id="fromEmail" type="email" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
-                        {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+                            <h6 class="form__title"><label for="fromEmail">Your Email</label></h6>
+                            <input class="form__input" id="fromEmail" type="email" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
+                            {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
 
-                        <h6><label for="subject">Subject</label></h6>
-                        <input id="subject" type="text" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}">
-                        {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+                            <h6 class="form__title"><label for="subject">Subject</label></h6>
+                            <input id="subject" type="text" class="form__input" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}">
+                            {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
-                        <h6><label for="message">Message</label></h6>
-                        <textarea rows="10" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
-                        {{ message is defined and message ? errorList(message.getErrors('message')) }}
+                            <h6 class="form__title"><label for="message">Message</label></h6>
+                            <textarea class="form__input" rows="10" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+                            {{ message is defined and message ? errorList(message.getErrors('message')) }}
 
-                        <input type="submit" value="Send">
-                    </form>
+                            <input class="button" type="submit" value="Send">
+                        </form>
+                    </div>
                 </div>
-                
             </div>
             
         </section>
