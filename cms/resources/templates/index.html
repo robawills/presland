@@ -362,7 +362,7 @@
                                 {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
                                 <h6 class="form__title"><label for="message">Message</label></h6>
-                                <textarea class="form__input" rows="10" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+                                <textarea class="form__input" rows="1" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
                                 {{ message is defined and message ? errorList(message.getErrors('message')) }}
 
                                 <input class="button" type="submit" value="Send">

@@ -29,13 +29,14 @@
 
             if (target.length) {
 
+                e.preventDefault();
+
                 $('html, body').animate({
 
-                    scrollTop: target.offset().top - headerHeight
+                    scrollTop: target.offset().top
 
                 }, 800);
 
-                e.preventDefault();
 
             }
 
