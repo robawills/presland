@@ -51,10 +51,9 @@
             </div>
 
             <header class="app__head hide@s-only">
+                
                 <div class="page-wrap page-wrap--menu">
 
-                    
-                    
                     <img src="{{ baseUrl }}assets/images/logo.svg" width="" height="" class="app-head__logo" alt="{{ siteName }}">
                         
                     <nav role="navigation" class="app-nav">
@@ -73,7 +72,9 @@
                     <a class="button into__button js-modal--open" href="#m1">
                         Get a free quote
                     </a> 
+                    
                 </div>
+
             </header>
 
 
@@ -88,9 +89,11 @@
             </main>
             
             <footer class="app-foot">
-                {% if 'submitted=true' not in craft.request.getQueryString() %}
-                    
-                {% endif %}
+                <div class="grid">
+                    <div class="grid__item">
+                        <img src="{{ baseUrl }}assets/images/logo.svg" width="" height="" class="app-foot__logo" alt="{{ siteName }}">
+                    </div>
+                </div>
                 
             </footer>
 
