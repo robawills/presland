@@ -322,58 +322,6 @@
             </div>
         </section>
 
-        <sections id="contact">
-            
-            <div class="grid">
-                <div class="page-wrap">
-                    <div class="grid contact">
-                        <div class="grid__item size-12">
-                            <h2>Contact us</h2>
-                        </div>
-
-                        <div class="grid__item size-6@m contact__text">
-                            <h5 class="h5">To request a free quote please fill in the form or contact us on <a href="tel:07835020316" class="contact__link">07835 020316</a> or email <a href="mailto:info@preslandservices.com" class="contact__link">info@preslandservices.com</a></h2>
-                            <p>We are always montering email and keeping upto date to ensure you get a fast and hassel free service.</p>
-                            <p>Your contact details will only be used to contact you regarding your quote and no infomation will be passed on.</p>
-                        </div>
-
-                        <div class="grid__item size-6@m">
-                            {% macro errorList(errors) %}
-                                {% if errors %}
-                                    <ul class="errors">
-                                        {% for error in errors %}
-                                            <li>{{ error }}</li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endif %}
-                            {% endmacro %}
-
-                            {% from _self import errorList %}
-
-                            <form method="post" action="" accept-charset="UTF-8" class="form">
-                                {{ getCsrfInput() }}
-                                <input type="hidden" name="action" value="contactForm/sendMessage">
-                                <input type="hidden" name="redirect" value="thanks">
-
-                                <h6 class="form__title"><label for="fromName">Your Name</label></h6>
-                                <input class="form__input" id="fromName" type="text" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
-                                {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
-
-                                <h6 class="form__title"><label for="fromEmail">Your Email</label></h6>
-                                <input class="form__input" id="fromEmail" type="email" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
-                                {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
-
-                                <h6 class="form__title"><label for="message">Message</label></h6>
-                                <textarea class="form__input" rows="1" cols="40" id="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
-                                {{ message is defined and message ? errorList(message.getErrors('message')) }}
-
-                                <input class="button" type="submit" value="Send">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </sections>
 
     {# -------------form------------- #}
 
