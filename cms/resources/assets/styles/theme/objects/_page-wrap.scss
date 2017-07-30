@@ -9,6 +9,8 @@
     &--menu {
         display: flex;
         justify-content: space-between;
+        
+
         @include media(l) {
             max-width: 1500px;
         }

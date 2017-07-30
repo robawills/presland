@@ -2,15 +2,24 @@
 	#APP HEADER
 \*----------------------------------------------------------------------------*/
 
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+
 .app-head {
     color:#262626;
-    z-index: 1;
-    position: fixed;
     width: 100%;
-    top: 0;
     display: flex;
     justify-content: space-between;
-    
+    background-color:white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
     &__logo {
         width: 3rem;
         height: 3rem;

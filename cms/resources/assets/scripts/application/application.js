@@ -17,33 +17,20 @@
 
 ((PRESLAND) => {
 
-    // Smooth scroll
+    function initMap() {
+        
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
 
-    $(document).on('click', '.js-smooth-scroll', function(e) {
-
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-            var target = $(this.hash);
-
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-
-            if (target.length) {
-
-                e.preventDefault();
-
-                $('html, body').animate({
-
-                    scrollTop: target.offset().top
-
-                }, 800);
-
-
-            }
-
-        }
-
-    });
-
+      
     
 
 

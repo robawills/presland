@@ -7,7 +7,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: auto;
+    margin: auto;
+    background-color: #272726;
 
     @include media(l) {
         flex-direction: row;
@@ -17,12 +18,10 @@
     &__logo {
         margin: 2rem auto auto;
         width: 8rem;
-        height: 2.75rem;
+        height: auto;
 
-        @include media(l) {
-            width: 12rem;
-            height: 4.125rem;
-            margin-right: 0;
+        @include media(m) {
+            width: 5rem;
         }
     }
 }

@@ -5,10 +5,16 @@
 .modal {
     background-color: rgba(255,255,255,0.7);
 
+
+    &__wrap {
+        padding: 1rem 2rem 2rem 2rem;
+    }
+
+
     &__content {
         width: 95%;
-        max-width: 80rem;
-        border: 0.1rem solid #F0F0F0;
+        max-width: 40rem;
+        border: 0.1rem solid #000000;
     }
     
 }
