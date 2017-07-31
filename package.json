@@ -39,8 +39,10 @@
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^3.2.2",
+    "smoothscroll-polyfill": "^0.3.5",
     "stylelint": "^7.10.1",
     "uglify-es": "^3.0.10",
     "yarn": "^0.24.5"

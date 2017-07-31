@@ -1,3 +1,7 @@
+//require('smoothscroll-polyfill').polyfill();
+
+import 'smoothscroll-polyfill';
+
 /*--------------------------------------------------*\
 	#REDDINGSCOURT NAME | JS MAIN COMPONENTS
 	
@@ -21,16 +25,39 @@
         
         var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
+            zoom: 4,
+            center: uluru
         });
         var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+            position: uluru,
+            map: map
         });
-      }
+    }
 
-      
+    const smoothTarget = document.querySelectorAll('.js-smooth-scroll')
+
+    if (smoothTarget.length) {
+
+        [...smoothTarget].map(link => {
+
+            link.onclick = ((e) => {
+
+                e.preventDefault()
+            
+                const href = link.getAttribute("href")
+                const target = document.querySelectorAll(href)[0]
+
+                target.scrollIntoView({
+                    block: "start",
+                    behavior: "smooth"
+                });
+                
+
+            })
+
+        })
+
+    }
     
 
 
