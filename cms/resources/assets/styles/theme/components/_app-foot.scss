@@ -10,18 +10,9 @@
     margin: auto;
     background-color: white;
 
-    @include media(l) {
-        flex-direction: row;
-        align-items: flex-end;
+    &__disclaimer p {
+        margin-top: 3rem;
+        font-size: 0.5erem;
     }
-    
-    &__logo {
-        margin: 2rem auto auto;
-        width: 8rem;
-        height: auto;
 
-        @include media(m) {
-            width: 5rem;
-        }
-    }
 }
