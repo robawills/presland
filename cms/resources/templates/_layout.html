@@ -145,6 +145,28 @@
             </div>
                 
             </footer>
+         <script>
+            function initMap() {
+                var uluru = {lat: 51.504950, lng: -0.126170};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: uluru,
+                disableDefaultUI: true,
+                scrollwheel: false
+
+                });
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+                });
+            }
+        </script> 
+
+      
+
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMg3SQdTCa3n5ZIRLh1RNfA8BXXAePsQI&callback=initMap">
+        </script>
 
         {% includeJsFile baseUrl ~ 'assets/scripts/framework/parties/domtastic.min.js' %}
         {% includeJsFile baseUrl ~ 'assets/scripts/framework/framework.min.js' %}
