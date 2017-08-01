@@ -1,6 +1,7 @@
 //require('smoothscroll-polyfill').polyfill();
 
-import 'smoothscroll-polyfill';
+import 'smoothscroll-polyfill'
+import { tns } from "tiny-slider/src/tiny-slider.module"
 
 /*--------------------------------------------------*\
 	#REDDINGSCOURT NAME | JS MAIN COMPONENTS
@@ -58,6 +59,15 @@ import 'smoothscroll-polyfill';
         })
 
     }
+
+    console.log(tns)
+
+    const slider = tns({
+        container: document.querySelector('.js-slider'),
+        items: 1,
+        slideBy: 'page',
+        autoplay: true
+    });
     
 
 
