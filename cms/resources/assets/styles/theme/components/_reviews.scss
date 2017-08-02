@@ -1,0 +1,17 @@
+.reviews {
+    width: 100%;
+    height: auto;
+    background-color: #045E82;
+    padding: 5rem;
+    
+    &__h2 {
+        text-align: center;
+    }
+
+    &__box {
+        background-color: #727D81;
+        padding: 3rem;
+        margin: 0.25rem;
+        
+    }
+}

@@ -64,9 +64,9 @@ import { tns } from "tiny-slider/src/tiny-slider.module"
 
     const slider = tns({
         container: document.querySelector('.js-slider'),
-        items: 1,
+        items: 3,
         slideBy: 'page',
-        autoplay: true
+        autoplay: false
     });
     
 
