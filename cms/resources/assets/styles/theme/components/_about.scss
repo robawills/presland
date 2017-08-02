@@ -1,3 +1,5 @@
+
+
 .about {
     background-color:#f0f0f0;
 
@@ -7,5 +9,17 @@
 
     &__mug-shot {
         padding-bottom: 3rem;
+    }
+
+    &__spacing {
+        margin: 3rem 0;
+
+        @include media(m) {
+            margin: 4rem 0;
+        }
+
+        @include media(l) {
+            margin: 6rem 0;
+        }
     }
 }
