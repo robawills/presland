@@ -23,14 +23,14 @@
     }
 
     @include media(m) {
-        padding: 5rem 0;
+        padding: 9rem 0 3rem 0;
         &__logo {
             padding: 0 3rem 0 0;
         }
     }
 
     @include media(l) {
-        padding: 8rem 0;
+        padding: 12rem 0 8rem 0;
 
         &__logo {
             padding: 0 8rem 0 0;

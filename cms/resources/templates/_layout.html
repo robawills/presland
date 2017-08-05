@@ -17,7 +17,7 @@
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Studio, 1 &amp; 2 bedroom apartments in High Wycombe just 23 minutes from Marylebone">
+        <meta name="description" content="">
         <meta name="coverage" content="Worldwide">
         <meta name="format-detection" content="telephone=no">
     	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
@@ -33,12 +33,12 @@
         <aside id="aside" class="off-canvas app-nav">
             <ul class="app-nav__list app-nav__list--mobile hide@m">
                 
-                <li class="app-nav__item app-nav__item--mobile"><a href="#home" class="app-nav__link">Home</a></li>
-                <li class="app-nav__item app-nav__item--mobile "><a href="#about" class="app-nav__link">About</a></li>
-                <li class="app-nav__item app-nav__item--mobile "><a href="#services" class="app-nav__link">Services</a></li>
-                <li class="app-nav__item app-nav__item--mobile "><a href="#rates" class="app-nav__link">Rates</a></li>
-                {# <li class="app-nav__item app-nav__item--mobile "><a href="#reviews" class="app-nav__link">Reviews</a></li> #}
-                <li class="app-nav__item app-nav__item--mobile "><a href="#contact" class="app-nav__link">Contact</a></li>
+                <li class="app-nav__item app-nav__item--mobile"><a href="#home" class="app-nav__link js-smooth-scroll">Home</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#about" class="app-nav__link js-smooth-scroll">About</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#services" class="app-nav__link js-smooth-scroll">Services</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#rates" class="app-nav__link js-smooth-scroll">Rates</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#reviews" class="app-nav__link js-smooth-scroll">Reviews</a></li>
+                <li class="app-nav__item app-nav__item--mobile "><a href="#contact" class="app-nav__link js-smooth-scroll">Contact</a></li>
             </ul>
         </aside>
         
@@ -63,7 +63,7 @@
                             <li class="app-nav__item"><a href="#about" class="app-nav__link js-smooth-scroll">About</a></li>
                             <li class="app-nav__item"><a href="#services" class="app-nav__link js-smooth-scroll">Services</a></li>
                             <li class="app-nav__item"><a href="#rates" class="app-nav__link js-smooth-scroll">Rates</a></li>
-                            {# <li class="app-nav__item "><a href="#reviews" class="app-nav__link">Reviews</a></li> #}
+                            <li class="app-nav__item "><a href="#reviews" class="app-nav__link js-smooth-scroll">Reviews</a></li>
                             <li class="app-nav__item"><a href="#contact" class="app-nav__link js-smooth-scroll">Contact</a></li>
                         </ul>
                         
@@ -88,16 +88,17 @@
                 {% endblock %}
             </main>
             
-            <footer class="app-foot" id="contact">
+            <footer class="app-foot" >
+                <div id="contact"></div>
                 <div class="grid">
                 <div class="page-wrap">
                     <div class="grid contact">
                         <div class="grid__item size-12">
-                            <h2>Contact us</h2>
+                            <h2 class="app-foot__title">Contact us</h2>
                         </div>
 
                         <div class="grid__item size-6@m contact__text">
-                            <h5 class="h5">To request a free quote please fill in the form or contact us on <a href="tel:07835020316" class="contact__link">07835 020316</a> or email <a href="mailto:info@preslandservices.com" class="contact__link">info@preslandservices.com</a></h2>
+                            <h4 class="h4">To request a free quote please fill in the form or contact us on <a href="tel:07835020316" class="contact__link">07835 020316</a> or email <a href="mailto:info@preslandservices.com" class="contact__link">info@preslandservices.com</a></h4>
                             <p>We are always montering email and keeping upto date to ensure you get a fast and hassel free service.</p>
                             <p>Your contact details will only be used to contact you regarding your quote and no infomation will be passed on.</p>
                         </div>

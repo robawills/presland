@@ -1,17 +1,30 @@
 .reviews {
     width: 100%;
-    height: auto;
+   
     background-color: #045E82;
     padding: 5rem;
     
     &__h2 {
         text-align: center;
+        margin-bottom: 3rem;
     }
 
     &__box {
-        background-color: #727D81;
-        padding: 3rem;
-        margin: 0.25rem;
+        margin: 0.25rem;        
+    }
+
+    &__content {
+        background-color:rgba(255, 255, 255, 0.6);
+        border: 2px solid #989898;
+        color: #272726;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 0.5rem;
+    }
+
+    &__title {
+        font-weight: 300;
+        margin-bottom: 0.5rem;
         
     }
 }

@@ -34,3 +34,10 @@
     font-size: 1rem;
     margin: 1rem 0 0 1rem;
 }
+
+#home, #about, #services, #rates, #reviews, #contact {
+    @include media(m) {
+        position: absolute;
+        top: -100px;
+    }
+}

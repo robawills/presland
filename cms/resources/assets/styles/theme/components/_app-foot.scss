@@ -10,6 +10,10 @@
     margin: auto;
     background-color: white;
 
+    &__title {
+        color: $blue;
+    }
+
     &__disclaimer p {
         margin-top: 3rem;
         font-size: 0.5erem;
