@@ -33,10 +33,10 @@ return [
         
         'environmentVariables' => [
             'basePath' => dirname(__DIR__, 2) . '/public/',
-            'baseUrl'  => 'https://centresquare-hw.com/'
+            'baseUrl'  => 'https://presland.kbadev.co.uk/'
         ],
 
-        'siteUrl' => 'https://centresquare-hw.com/'
+        'siteUrl' => 'https://presland.kbadev.co.uk/'
     ],
     
     '.local' => [
