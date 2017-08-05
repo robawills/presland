@@ -30,14 +30,14 @@ header {
 
         @include media(m) {
             width: 3rem;
-            height: auto;
+            height: 4rem;
             margin-top: 1rem;
 
         }
         
         @include media(l) {
             width: 3rem;
-            height: auto;
+            height: 4rem;
             
         }
     }

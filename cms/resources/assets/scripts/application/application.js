@@ -42,8 +42,6 @@ import { tns } from "tiny-slider/src/tiny-slider.module"
         [...smoothTarget].map(link => {
 
             link.onclick = ((e) => {
-
-                e.preventDefault()
             
                 const href = link.getAttribute("href")
                 const target = document.querySelectorAll(href)[0]
@@ -65,8 +63,15 @@ import { tns } from "tiny-slider/src/tiny-slider.module"
     const slider = tns({
         container: document.querySelector('.js-slider'),
         items: 3,
-        slideBy: 'page',
-        autoplay: false
+        // slideBy: 'page',
+        autoplay: false,
+        ".js-slider": "#responsive",
+        "responsive": {
+            "0": 1,
+            "600": 2,
+            "900": 3
+        },
+        controls: false
     });
     
 
