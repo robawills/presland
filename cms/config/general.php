@@ -33,10 +33,10 @@ return [
         
         'environmentVariables' => [
             'basePath' => dirname(__DIR__, 2) . '/public/',
-            'baseUrl'  => 'https://presland.kbadev.co.uk/'
+            'baseUrl'  => 'https://preslandservices.com/'
         ],
 
-        'siteUrl' => 'https://presland.kbadev.co.uk/'
+        'siteUrl' => 'https://preslandservices.com/'
     ],
     
     '.local' => [
