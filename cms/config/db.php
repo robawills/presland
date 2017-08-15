@@ -20,7 +20,7 @@ return [
 
     '.kbadev.co.uk' => [
         'database'  => 'dean',
-        'password'  => 'plumbingisgreat82!'
+        'password'  => 'plumbingisgreat82!' 
     ],
     
 ];
