@@ -235,82 +235,25 @@
                                     <p class="rate__sub-title">(8pm-7am Monday - Friday, all day weekends and bank holidays)</p>
                                 </th>
                             </tr>
-                            <tr>
-                                <td class="rate__col-1">Charge per hour then 30 min slots after</td>
-                                <td class="rate__col-2 rate__number">£75</td>
-                                <td class="rate__col-3 rate__number">£100</td>
-                            </tr>
-                            <tr>
-                                <td class="rate__col-1">Boiler Service</td>
-                                <td class="rate__col-2 rate__number">£75</td>
-                                <td class="rate__col-3 rate__number">£100</td>
-                            </tr>
-                            <tr>
-                                <td class="rate__col-1">Gas safety</td>
-                                <td class="rate__col-2 rate__number">£75</td>
-                                <td class="rate__col-3 rate__number">£100</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">Landlords gas safety and service pack</td>
-                                <td class="rate__col-2 rate__number">£120</td>
-                                <td class="rate__col-3 rate__number">£160</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">Pre purchase survey: Gas, Central Heating and Plumbing</td>
-                                <td class="rate__col-2 rate__number">£100</td>
-                                <td class="rate__col-3 rate__number">£150</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1 hide@s-only"></td>
-                                <td class="rate__col-2 rate__number hide@s-only"></td>
-                                <td class="rate__col-3 rate__number rate__number--small">(Prices do not include VAT)</td>
-                            </tr>
+                            {% for row in entry.rates %}
+                                <tr>
+                                    <td class="rate__col-1">{{ row.service }}</td>
+                                    <td class="rate__col-2 rate__number">{{ row.standardRate }}</td>
+                                    <td class="rate__col-3 rate__number">{{ row.nonStandardRate }}</td>
+                                </tr>
+                            {% endfor %}
                             
                         </table>
 
                         
                         <table class="rate__table rate__table--50">
                             <h6>System Powerflushing (including approved chemicals)</h6>
-                            <tr>
-                                <td class="rate__col-1">Up to 4 radiators</td>
-                                <td class="rate__col-2 rate__number">£250</td>
-                            </tr>
-                            <tr>
-                                <td class="rate__col-1">5 radiators</td>
-                                <td class="rate__col-2 rate__number">£290</td>
-                            </tr>
-                            <tr>
-                                <td class="rate__col-1">6 radiators</td>
-                                <td class="rate__col-2 rate__number">£330</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">7 radiators</td>
-                                <td class="rate__col-2 rate__number">£370</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">8 radiators</td>
-                                <td class="rate__col-2 rate__number">£410</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">9 radiators</td>
-                                <td class="rate__col-2 rate__number">£450</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">10 radiators</td>
-                                <td class="rate__col-2 rate__number">£490</td>
-                            </tr>
-
-                            <tr>
-                                <td class="rate__col-1">Per additional radiators<br>(domestic installations only)</td>
-                                <td class="rate__col-2 rate__number">£45</td>
-                            </tr>
+                            {% for row in entry.tableTwo %}
+                                <tr>
+                                    <td class="rate__col-1">{{ row.radiatorNumber }}</td>
+                                    <td class="rate__col-2 rate__number">{{ row.radiatorRate }}</td>
+                                </tr>
+                            {% endfor %}
                         </table>
                     </div>
                 </div>
