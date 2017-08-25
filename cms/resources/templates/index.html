@@ -136,79 +136,68 @@
             </div>
 
             <div class="grid page-wrap">
-
-                <div class="grid__item size-6@m">
-
-                    <h5></h5>
-
-                    <div class="grid">
-
-                        <div class="grid__item size-6@m ">
-                            
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-        
-                        </div>
-
+                {% for service in entry.services %}
+                    {% if loop.first %}
                         <div class="grid__item size-6@m">
                             
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-        
-                        </div>
+                                <h5>{{ service.theTitle }}</h5>
+                            
 
-                    </div>
+                            <div class="grid">
+
+                                <div class="grid__item size-6@m ">
+                                    
+                                    <ul>
+                                        {% for row in service.jobType | slice(0, 10) %}
+                                            <li>{{ row.jobType }}</li>
+                                        {% endfor %}
+                                    </ul>
                 
-                </div>
-                    
-                <div class="grid__item size-3@m services__border services__padding">
+                                </div>
 
-                    <h5>Plumbing</h5>
+                                <div class="grid__item size-6@m">
+                                    
+                                    <ul>
+                                        {% for row in service.jobType | slice(11) %}
+                                            <li>{{ row.jobType }}</li>
+                                        {% endfor %}
+                                    </ul>
+                
+                                </div>
 
-                    <ul>
-                        <li>Overflows</li>
-                        <li>Burst pipes</li>
-                        <li>Cold water storage</li>
-                        <li>Stopcocks</li> 
-                        <li>Taps</li>
-                        <li>Washing machine installation</li>
-                        <li>Dishwasher installation</li>
-                        <li>Washers</li>
-                        <li>Waste pipes</li> 
-                        <li>Rain water pipes</li>
-                    </ul>
+                            </div>
 
-                </div>
+                        </div>
+                        {% elseif loop.index == 2 %}
+                            <div class="grid__item size-3@m services__border services__padding">
 
-                <div class="grid__item size-3@m services__padding">
+                                <h5>{{ service.theTitle }}</h5>
 
-                    <h5>Drainage</h5>
+                                <ul>
+                                    {% for row in service.jobType | slice(0, 10) %}
+                                        <li>{{ row.jobType }}</li>
+                                    {% endfor %}
+                                </ul>
 
-                    <ul>
-                        <li>Blockages</li>
-                        <li>Drains</li>
-                        <li>Pumps</li>
-                        <li>Waste disposal units</li>  
-                        <li>Toilets</li>
-                        <li>Saniflos</li>
-                    </ul>
+                            </div>
 
+                        
+
+                        {% elseif loop.index == 3 %}
+                            <div class="grid__item size-3@m services__padding">
+
+                                <h5>{{ service.theTitle }}</h5>
+
+                                <ul>
+                                    {% for row in service.jobType | slice(0, 10) %}
+                                        <li>{{ row.jobType }}</li>
+                                    {% endfor %}
+                                </ul>
+
+                            </div>
+
+                        {% endif %}
+                    {% endfor %}
                 </div>
 
             </div>
